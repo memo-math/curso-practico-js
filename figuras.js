@@ -93,7 +93,7 @@ function calcularPerimetroTriangulo(){
     const perimetro = perimetroTriangulo(lado1Number, lado2Number, lado3Number);
     alert(perimetro);
 }
-//Todavia no funciona tiene que ver con areaTriangulo()
+
 function calcularAreaTriangulo(){
     const lado1 = document.getElementById("Inputlado1");
     const lado2 = document.getElementById("Inputlado2");
@@ -107,4 +107,25 @@ function calcularAreaTriangulo(){
     alert(area);
 }
 
+//Logica para la altura del triángulo isósceles
 
+function calcularAlturaIsosceles(){
+    const ladoA = document.getElementById("InputladoA");
+    const ladoB = document.getElementById("InputladoB");
+    const ladoBase = document.getElementById("InputladoBase");
+
+/*     const lado1Number = parseFloat(lado1.value);
+    const lado2Number = parseFloat(lado2.value);
+    const lado3Number = parseFloat(lado3.value); */
+
+    const mensaje="No ingresaste un triangulo isosceles"
+    
+    if (ladoA.value != ladoB.value){
+        alert(mensaje)
+    }
+    else{
+        const altura = (Math.sqrt(4 * (ladoA.value * ladoA.value) - (ladoBase.value *ladoBase.value))) 
+        * 0.5
+        alert(altura)
+    }
+}
